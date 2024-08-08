@@ -1,40 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-08T17:17:53.289089" rpa="false" schemaversion="5">
-<suite id="s1" name="Main" source="D:\Robotframework\FinalAssignment\tests\main.robot">
-<test id="s1-t1" name="TC Create New Customer" line="10">
-<kw name="Common.Open New Browser" type="SETUP">
-<msg time="2024-08-08T17:17:53.553381" level="FAIL">No keyword with name 'Common.Open New Browser' found.</msg>
-<status status="FAIL" start="2024-08-08T17:17:53.553381" elapsed="0.000000">No keyword with name 'Common.Open New Browser' found.</status>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-08T23:21:07.581752" rpa="false" schemaversion="5">
+<suite id="s1" name="Testfail" source="D:\RobotFramework\FinalAssignment\tests\testfail.robot">
+<test id="s1-t1" name="TC Create New Customer with fields blank" line="10">
+<kw name="Open New Browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:07.941042" level="INFO">Opening browser 'chrome' to base url 'https://www.demo.guru99.com/v4/index.php'.</msg>
+<arg>https://www.demo.guru99.com/v4/index.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-08T23:21:07.925433" elapsed="6.528971"/>
 </kw>
-<kw name="Common.Exit Browser" type="TEARDOWN">
-<msg time="2024-08-08T17:17:53.554379" level="FAIL">No keyword with name 'Common.Exit Browser' found.</msg>
-<status status="FAIL" start="2024-08-08T17:17:53.554379" elapsed="0.000000">No keyword with name 'Common.Exit Browser' found.</status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-08T23:21:14.454404" elapsed="0.039637"/>
 </kw>
-<doc>This is some info about test Create new Customer</doc>
-<tag>TC02</tag>
-<status status="FAIL" start="2024-08-08T17:17:53.551387" elapsed="0.002992">Setup failed:
-No keyword with name 'Common.Open New Browser' found.
-
-Also teardown failed:
-No keyword with name 'Common.Exit Browser' found.</status>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Guru99 Bank</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-08T23:21:14.494041" elapsed="0.121944"/>
+</kw>
+<status status="PASS" start="2024-08-08T23:21:07.925433" elapsed="6.690552"/>
+</kw>
+<kw name="Login with valid user and pass">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:14.617980" level="INFO">Typing text 'mngr582243' into text field 'name=uid'.</msg>
+<arg>name=uid</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T23:21:14.617980" elapsed="0.188287"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:14.821888" level="INFO">Typing text '1234567008@' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T23:21:14.821888" elapsed="0.181281"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:15.004178" level="INFO">Clicking element 'name=btnLogin'.</msg>
+<arg>name=btnLogin</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T23:21:15.004178" elapsed="1.655507"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Manger Id : mngr582243</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-08T23:21:16.659685" elapsed="0.013965"/>
+</kw>
+<arg>mngr582243</arg>
+<arg>1234567008@</arg>
+<status status="PASS" start="2024-08-08T23:21:14.616982" elapsed="2.056668"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-08T23:21:18.673813" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-08T23:21:16.673650" elapsed="2.000163"/>
+</kw>
+<kw name="Click On New Customer menu">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:18.673813" level="INFO">Clicking link 'xpath=//a[normalize-space()='New Customer']'.</msg>
+<arg>xpath=//a[normalize-space()='New Customer']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T23:21:18.673813" elapsed="0.141481"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-08T23:21:21.816552" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-08T23:21:18.815294" elapsed="3.001258"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:22.371082" level="INFO">Current page contains text 'Add New Customer'.</msg>
+<arg>Add New Customer</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-08-08T23:21:21.817566" elapsed="0.553516"/>
+</kw>
+<status status="PASS" start="2024-08-08T23:21:18.673813" elapsed="3.697269"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-08T23:21:24.371744" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-08T23:21:22.371082" elapsed="2.000662"/>
+</kw>
+<kw name="Input blank All fields">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:24.387375" level="INFO">Typing text '' into text field 'name=name'.</msg>
+<arg>name=name</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T23:21:24.387375" elapsed="0.217296"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-08T23:21:24.637144" level="INFO">${message_name} = </msg>
+<var>${message_name}</var>
+<arg>id=message</arg>
+<arg>innerHTML</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-08T23:21:24.605669" elapsed="0.031475"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2024-08-08T23:21:24.637144" level="FAIL"> != Customer name must not be blank</msg>
+<arg>${message_name}</arg>
+<arg>Customer name must not be blank</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2024-08-08T23:21:24.637144" elapsed="0.000000"> != Customer name must not be blank</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//input[@value='f']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=dob</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<arg>id=message24</arg>
+<arg>Date Field must not be blank</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=addr</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<arg>id=message3</arg>
+<arg>Address Field must not be blank</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=city</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>City Field must not be blank</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=state</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>State must not be blank</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=pinno</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>PIN Code must not be blank</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=telephoneno</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>Mobile no must not be blank</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=emailid</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>Email-ID must not be blank</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.637144" elapsed="0.000000"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>Password must not be blank</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.652765" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-08-08T23:21:24.652765" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-08T23:21:24.371744" elapsed="0.281021"> != Customer name must not be blank</status>
+</kw>
+<status status="FAIL" start="2024-08-08T23:21:07.925433" elapsed="16.727332"> != Customer name must not be blank</status>
 </test>
-<doc>This is some basic info about the whole suite</doc>
-<status status="FAIL" start="2024-08-08T17:17:53.295073" elapsed="0.260304"/>
+<doc>This is some info about test Suite</doc>
+<status status="FAIL" start="2024-08-08T23:21:07.581752" elapsed="17.071013"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">TC02</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Main">Main</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testfail">Testfail</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-08T17:17:53.548395" level="ERROR">Error in file 'D:\Robotframework\FinalAssignment\tests\main.robot' on line 4: Resource file 'Pages\Login.robot' does not exist.</msg>
-<msg time="2024-08-08T17:17:53.549393" level="ERROR">Error in file 'D:\Robotframework\FinalAssignment\tests\main.robot' on line 5: Resource file 'Pages\Common.robot' does not exist.</msg>
-<msg time="2024-08-08T17:17:53.550391" level="ERROR">Error in file 'D:\Robotframework\FinalAssignment\tests\main.robot' on line 6: Resource file 'Pages\AddNewCustomer.robot' does not exist.</msg>
 </errors>
 </robot>

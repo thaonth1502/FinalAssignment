@@ -1,9 +1,9 @@
 *** Settings ***
 Documentation       This is some basic info about the whole suite
 Library             SeleniumLibrary
-Resource            Pages/Login.robot
-Resource            Pages/Common.robot
-Resource            Pages/AddNewCustomer.robot
+Resource            ../Pages/Login.robot
+Resource            ../Pages/Common.robot
+Resource            ../Pages/AddNewCustomer.robot
 
 
 *** Test Cases ***
