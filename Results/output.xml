@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-08T17:17:53.289089" rpa="false" schemaversion="5">
+<suite id="s1" name="Main" source="D:\Robotframework\FinalAssignment\tests\main.robot">
+<test id="s1-t1" name="TC Create New Customer" line="10">
+<kw name="Common.Open New Browser" type="SETUP">
+<msg time="2024-08-08T17:17:53.553381" level="FAIL">No keyword with name 'Common.Open New Browser' found.</msg>
+<status status="FAIL" start="2024-08-08T17:17:53.553381" elapsed="0.000000">No keyword with name 'Common.Open New Browser' found.</status>
+</kw>
+<kw name="Common.Exit Browser" type="TEARDOWN">
+<msg time="2024-08-08T17:17:53.554379" level="FAIL">No keyword with name 'Common.Exit Browser' found.</msg>
+<status status="FAIL" start="2024-08-08T17:17:53.554379" elapsed="0.000000">No keyword with name 'Common.Exit Browser' found.</status>
+</kw>
+<doc>This is some info about test Create new Customer</doc>
+<tag>TC02</tag>
+<status status="FAIL" start="2024-08-08T17:17:53.551387" elapsed="0.002992">Setup failed:
+No keyword with name 'Common.Open New Browser' found.
+
+Also teardown failed:
+No keyword with name 'Common.Exit Browser' found.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" start="2024-08-08T17:17:53.295073" elapsed="0.260304"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC02</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Main">Main</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-08T17:17:53.548395" level="ERROR">Error in file 'D:\Robotframework\FinalAssignment\tests\main.robot' on line 4: Resource file 'Pages\Login.robot' does not exist.</msg>
+<msg time="2024-08-08T17:17:53.549393" level="ERROR">Error in file 'D:\Robotframework\FinalAssignment\tests\main.robot' on line 5: Resource file 'Pages\Common.robot' does not exist.</msg>
+<msg time="2024-08-08T17:17:53.550391" level="ERROR">Error in file 'D:\Robotframework\FinalAssignment\tests\main.robot' on line 6: Resource file 'Pages\AddNewCustomer.robot' does not exist.</msg>
+</errors>
+</robot>
